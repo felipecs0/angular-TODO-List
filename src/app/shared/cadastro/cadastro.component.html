@@ -1,0 +1,7 @@
+<div class="cadastro-tarefas">
+  <form [formGroup]='cadastroTarefa'>
+    <label>Cadastrar Tarefa </label>
+    <input type="text" required formControlName='tarefa' [ngClass]="{'is-invalid': cadastroTarefa.get('tarefa')?.errors && (cadastroTarefa.get('tarefa')?.dirty || cadastroTarefa.get('Tarefa')?.touched)}">
+    <button class='btn-primary'(click)='cadastrar()' [disabled]='cadastroTarefa.invalid'>cadastrar</button>
+  </form>
+</div>

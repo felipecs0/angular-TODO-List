@@ -1,0 +1,27 @@
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.table>:not(caption)>*>*{
+  min-width: 10rem;
+  padding: 1rem 1.5rem;
+  border-bottom-width: 1rem;
+  border-bottom-width: 1px;
+  box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+tbody, td, tfoot, th, thead, tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  text-align: left;
+}
+.tarefa-concluida{
+  background-color: red;
+  color: red;
+}
+.disable{
+  color: grey;
+}

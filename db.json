@@ -1,0 +1,19 @@
+{
+  "todo": [
+    {
+      "id": 1,
+      "tarefa": "Lavar Roupa",
+      "status": true
+    },
+    {
+      "id": 2,
+      "tarefa": "Arrumar Cama",
+      "status": false
+    },
+    {
+      "id": 3,
+      "tarefa": "Fazer Almoço",
+      "status": false
+    }
+  ]
+}

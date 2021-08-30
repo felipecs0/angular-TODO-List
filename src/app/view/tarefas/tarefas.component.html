@@ -1,0 +1,28 @@
+<div class='container'>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Tarefa</th>
+        <th>Status</th>
+        <th>EDIT</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let tarefa of tarefas">
+      <tr [ngSwitch]="tarefa.status" [ngClass]="{'tarefa-concluida': tarefa.status === true}">
+        <th *ngSwitchCase="true"><del class="disable">{{tarefa.id}}</del></th>
+        <td *ngSwitchCase="true"><del class="disable">{{tarefa.tarefa}}</del></td>
+        <th *ngSwitchCase="false">{{tarefa.id}}</th>
+        <td *ngSwitchCase="false">{{tarefa.tarefa}}</td>
+        <td>
+          <p *ngSwitchCase="true" class="disable">Concluido</p>
+          <p *ngSwitchCase="false">A fazer</p>
+        </td>
+        <td>
+          <a class="btn-primary" (click)="concluir(tarefa)">Concluida</a>
+          <a class="btn-warn" (click)="deleteID(tarefa.id)">Deletar</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
